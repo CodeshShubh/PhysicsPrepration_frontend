@@ -32,9 +32,9 @@ if (!videos || videos.length === 0) {
 }
 
     return (
-      <section className='flex justify-evenly mt-10'>
+      <section className='flex justify-evenly mt-10 '>
           {/* main */}
-          <main className=''>
+          <main className='w-[60%]'>
             <div className='flex justify-between'>
                 <h1 className='font-extrabold  lg:text-3xl'>All Topics</h1>
                 <div className='border rounded-2xl flex justify-center items-center'>
@@ -43,7 +43,7 @@ if (!videos || videos.length === 0) {
             </div>
               
               {/* cardContainer */}
-            <CardContainer videos={videos}/>
+            <CardContainer className='' videos={videos}/>
 
               {/* pagination */}
             <Pagination setpage={setpage} totalPage={totalPage} currentPage={currentPage}/>
@@ -51,7 +51,7 @@ if (!videos || videos.length === 0) {
 
 
           {/* aside */}
-          <aside className=' w-[15%] p-5 h-fit rounded bg-orange-50'>
+          <aside className=' hidden lg:block shadow-xl w-[15%] p-5 h-fit rounded bg-orange-50'>
               <Aside/>
           </aside>
       </section>
