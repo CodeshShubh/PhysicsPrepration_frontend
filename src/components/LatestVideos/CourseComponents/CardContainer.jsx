@@ -2,6 +2,17 @@ import { MdDateRange } from "react-icons/md";
 
 
 const CardContainer = ({videos}) => {
+
+
+  if (!videos || videos.length === 0) {
+    return (
+      <div className="flex justify-center items-center h-[450px]">
+        <h1 className="text-xl font-semibold text-gray-700 bg-orange-100 px-6 py-3 rounded shadow">
+          🚫 No Videos Found
+        </h1>
+      </div>
+    );
+  }
   
 
   return (
